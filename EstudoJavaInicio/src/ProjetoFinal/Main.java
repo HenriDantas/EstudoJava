@@ -1,4 +1,4 @@
-package primeiraAplicacao.ProjetoFinal;
+package ProjetoFinal;
 
 import java.util.Scanner;
 

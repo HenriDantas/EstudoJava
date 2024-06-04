@@ -1,4 +1,4 @@
-package primeiraAplicacao.Exercicios;
+package Exercicios;
 import java.util.Random;
 import java.util.Scanner;
 

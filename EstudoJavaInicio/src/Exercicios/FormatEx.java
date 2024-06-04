@@ -1,4 +1,4 @@
-package primeiraAplicacao.Exercicios;
+package Exercicios;
 public class FormatEx {
 
     public static void main(String[] args) {
