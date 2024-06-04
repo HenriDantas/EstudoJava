@@ -1,4 +1,4 @@
-package Exercicios;
+package primeiraAplicacao.Exercicios;
 import java.util.Scanner;
 
 public class Testes {

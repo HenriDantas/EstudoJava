@@ -1,5 +1,4 @@
-package Exercicios;
-public class ConversorTemp {
+package primeiraAplicacao.Exercicios;public class ConversorTemp {
 
     public static void main(String[] args){
         double celsius = 30.3;
