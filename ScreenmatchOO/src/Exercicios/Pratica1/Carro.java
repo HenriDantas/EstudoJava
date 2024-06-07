@@ -1,7 +1,5 @@
 package Exercicios.Pratica1;
 
-import java.util.Scanner;
-
 public class Carro {
 
     public String modelo;
