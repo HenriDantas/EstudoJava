@@ -1,6 +1,6 @@
 package Exercicios.Pratica3.Ex1;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Carro {
     private String nomeModelo;
@@ -38,7 +38,7 @@ public class Carro {
         //     if(preco > maiorPreco){
         //         maiorPreco = preco;
         //     }
-        // }tentar fazer dps
+        // }tentar fazer dps, algo mais "responsivo"
 
         this.precoAno1 = precoAno1;
         this.precoAno2 = precoAno2;
