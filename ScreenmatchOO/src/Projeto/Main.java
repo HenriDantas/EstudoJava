@@ -1,5 +1,7 @@
 package Projeto;
 import Projeto.Calculo.CalculoDeTempo;
+import Projeto.Calculo.FiltroRecomendacao;
+import Projeto.meuProjeto.Episodio;
 import Projeto.meuProjeto.Filme;
 import Projeto.meuProjeto.Serie;
 
@@ -38,6 +40,16 @@ public class Main {
         calculoDeTempo.incluiNoTempo(serie1);
         calculoDeTempo.incluiNoTempo(filme2);
         System.out.println(calculoDeTempo.getTempoTotal());
+
+        Episodio primeiro = new Episodio();
+        primeiro.setNumero(1);
+        primeiro.setSerie(serie1);
+        primeiro.setTotalAvaliacoes(300);
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtrar(filme1);
+        filtro.filtrar(filme2);
+        filtro.filtrar(primeiro);
 
     }
 }
