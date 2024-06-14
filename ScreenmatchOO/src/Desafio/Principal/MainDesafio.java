@@ -1,5 +1,6 @@
 import Desafio.Sons.Musica;
 import Desafio.Sons.Podcast;
+import Desafio.Sons.Preferido;
 
 public class MainDesafio {
     public static void main(String[] args) {
@@ -29,5 +30,10 @@ public class MainDesafio {
         for (int i = 0; i < 1000; i++) {
             meuPodcast.curtir();
         }
+
+        Preferido preferidas = new Preferido();
+        preferidas.verificaPreferencia(meuPodcast);
+        preferidas.verificaPreferencia(minhaMusica);
+        
     }
 }
