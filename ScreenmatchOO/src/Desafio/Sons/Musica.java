@@ -37,7 +37,7 @@ public class Musica extends Audio{
 
     @Override
     public double getClassificacao(){
-        if(curtidas / totalVisualizacao > 200) {
+        if(getCurtidas() / getTotalVisualizacoes() > 200) {
             return 10;
         } else {
             return 8;

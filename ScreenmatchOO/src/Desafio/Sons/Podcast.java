@@ -1,7 +1,7 @@
 package Desafio.Sons;
 
 public class Podcast extends Audio {
-    private String apresentador; //entrevistador
+    private String participante; //entrevistador
     private String convidado;   //entrevistado
     private String resumo;
 
@@ -19,9 +19,16 @@ public class Podcast extends Audio {
         this.participante = participante;
     }
 
+    public String getResumo() {
+        return resumo;
+    }
+    public void setResumo(String resumo) {
+        this.resumo = resumo;
+    }
+    
     @Override 
     public double getClassificacao(){
-        if(curtidas > 500) {
+        if(getCurtidas() > 500) {
             return 10;
         } else {
             return 8;

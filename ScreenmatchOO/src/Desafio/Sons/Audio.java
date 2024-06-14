@@ -58,16 +58,15 @@ public class Audio {
         curtidas++;
     }
 
-    public void avaliar(){
-        Scanner ler = new System.in();
-        System.out.println("Avalie com nota de 0 a 5");
-        nota += ler.nextDouble();
-        totalAvaliacoes++;
-    }
+    // public void avaliar(){
+    //     Scanner ler = new Scanner(System.in);
+    //     System.out.println("Avalie com nota de 0 a 5");
+
+    // }
 
     public void darPlay(){
         totalVisualizacoes++;
-        System.out.println("tocando: " + nome);
+        // System.out.println("tocando: " + nome);
     }
 
 }

@@ -1,3 +1,6 @@
+import Desafio.Sons.Musica;
+import Desafio.Sons.Podcast;
+
 public class MainDesafio {
     public static void main(String[] args) {
         Musica minhaMusica = new Musica();
@@ -6,24 +9,25 @@ public class MainDesafio {
 
 
         for (int i = 0; i < 1000; i++) {
-            minhaMusica.reproduz();
+            minhaMusica.darPlay();
         }
 
         for (int i = 0; i < 50; i++) {
-            minhaMusica.curte();
+            minhaMusica.curtir();
         }
 
         Podcast meuPodcast = new Podcast();
-        meuPodcast.setTitulo("Podpah");
-        meuPodcast.setApresentador("Igão e mitico");
+        meuPodcast.setNome("Podpah");
+        meuPodcast.setParticipante("Igão e mitico");
+        meuPodcast.setConvidado("");
 
 
         for (int i = 0; i < 5000; i++) {
-            meuPodcast.reproduz();
+            meuPodcast.darPlay();
         }
 
         for (int i = 0; i < 1000; i++) {
-            meuPodcast.curte();
+            meuPodcast.curtir();
         }
     }
 }
