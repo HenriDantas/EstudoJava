@@ -1,4 +1,6 @@
 package Projeto;
+import java.util.ArrayList;
+
 import Projeto.Calculo.CalculoDeTempo;
 import Projeto.Calculo.FiltroRecomendacao;
 import Projeto.meuProjeto.Episodio;
@@ -50,6 +52,15 @@ public class Main {
         filtro.filtrar(filme1);
         filtro.filtrar(filme2);
         filtro.filtrar(primeiro);
+
+        ArrayList<Filme> listaDeFilme = new ArrayList<>();
+        listaDeFilme.add(filme1);
+        listaDeFilme.add(filme2);
+        // listaDeFilme.add(serie1); só para mostrar que da erro
+        System.out.println(listaDeFilme.size());
+        System.out.println(listaDeFilme); //fazendo o override na classe filme quando vai pegar a lista ela precisa passar pela classe, então, ela passa pelo toString() de filme ao inves do toString() de objects
+        System.out.println(listaDeFilme.get(0).toString());
+
 
     }
 }
