@@ -22,7 +22,7 @@ public class MainDesafio {
         Podcast meuPodcast = new Podcast();
         meuPodcast.setNome("Podpah");
         meuPodcast.setParticipante("Igão e mitico");
-        meuPodcast.setConvidado("");
+        meuPodcast.setConvidado("Serjão");
 
 
         for (int i = 0; i < 5000; i++) {
