@@ -67,7 +67,7 @@ public class Titulo {
         System.out.println("Duração: %dMin".formatted(duracaoEmMinutos));
     }
 
-    public void avaliaFilme(double nota){
+    public void avaliaTitulo(double nota){
         somaAvaliacao += nota;
         totalDeAvaliacoes++;
     }
