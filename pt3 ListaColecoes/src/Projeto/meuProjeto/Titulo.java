@@ -1,6 +1,6 @@
 package Projeto.meuProjeto;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
 
     private String nome;
     private int anoLancamento;
@@ -74,6 +74,11 @@ public class Titulo {
 
     public double mediaAvaliacao(){
         return somaAvaliacao / totalDeAvaliacoes;       
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 
 }
