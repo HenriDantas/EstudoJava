@@ -39,8 +39,14 @@ public class MainDesafio {
             n = ler.nextInt();
         }
         
-
+        System.out.println("***********************");
+        System.out.println("COMPRAS REALIZADAS:\n");
         Collections.sort(carrinho.getProdutos());
+
+        for (Produto produto : carrinho.getProdutos()) {
+            System.out.println(produto.getNome() + " - " +produto.getPreco());
+        }
+
         System.out.println(carrinho.getProdutos() + "\n Saldo atual: " + cartao.getCredito() );
 
         /* -digitar o limite do cartão x
