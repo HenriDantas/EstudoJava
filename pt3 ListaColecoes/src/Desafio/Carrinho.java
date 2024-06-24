@@ -1,7 +1,27 @@
 package Desafio;
 
-public class Carrinho {
+import java.util.ArrayList;
+import java.util.List;
 
-    private Produto produto;
+public class Carrinho{
+    
+    private List<Produto> produtos;
+
+    public Carrinho(){
+        this.produtos = new ArrayList<>();
+    }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+    
+    public void colocarNoCarrinho(Produto produto){
+        this.produtos.add(produto);
+    }
+
+    @Override
+    public String toString() {
+        return produtos.toString();
+    }
     
 }

@@ -1,6 +1,6 @@
 package Desafio;
 
-public class Produto {
+public class Produto implements Comparable<Produto> {
     private double preco;
     private String nome;
 
@@ -16,5 +16,13 @@ public class Produto {
         return preco;
     }
 
+    @Override
+    public String toString() {
+        return "Produto: nome=" + this.nome + " Preco=" + this.preco + "\n";
+    }
     
+    @Override
+    public int compareTo(Produto outroProduto) {
+        return Double.valueOf(this.preco).compareTo(Double.valueOf(outroProduto.preco));
+    }
 }
