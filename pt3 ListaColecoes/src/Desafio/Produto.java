@@ -1,0 +1,20 @@
+package Desafio;
+
+public class Produto {
+    private double preco;
+    private String nome;
+
+    public Produto(String nome, double preco){
+        this.nome = nome;
+        this.preco = preco;
+    }
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    
+}
