@@ -9,11 +9,12 @@ import java.util.Scanner;
 
 public class Ex1 {
     public static void main(String[] args) throws IOException, InterruptedException {
-        //https://console.cloud.google.com/apis/dashboard?project=estudojava-427713
+        //https://console.cloud.google.com/apis/dashboard?project=estudojava-427713  
+        
         System.out.println("Qual livro deseja buscar? ");
         Scanner ler = new Scanner(System.in);
         String livro = ler.nextLine();
-        String chave = "AIzaSyCNkbUV8mddO_YBU90jywTr_1Kmy10qL5I";
+        String chave = "";
 
         String googleBooks = "https://www.googleapis.com/books/v1/volumes?q="+ livro + "&key=" + chave;
         

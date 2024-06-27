@@ -10,11 +10,12 @@ import java.util.Scanner;
 
 public class Ex2 {
     public static void main(String[] args) throws IOException, InterruptedException {
-        //https://www.coingecko.com/pt/developers/painel
+        //https://www.coingecko.com/pt/developers/painel 
+        
         System.out.println("Nome da moeda: ");
         Scanner ler = new Scanner(System.in);
         String moeda = ler.nextLine();
-        // String chave = "CG-M5iMWLs35BB27MNbvGbQsorr"; //n precisa da chave
+        // String chave = ""; //n precisa da chave
 
         String coinGecko = "https://api.coingecko.com/api/v3/simple/price?ids=" + moeda + "&vs_currencies=usd";
 
