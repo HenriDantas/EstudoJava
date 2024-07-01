@@ -1,28 +1,31 @@
-package Exercicios;
+package Exercicios.pt1;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandler;
 import java.util.Scanner;
 
-public class Ex3 {
+public class Ex2 {
     public static void main(String[] args) throws IOException, InterruptedException {
-        //https://www.themealdb.com/api.php
-
-        System.out.println("Qual receita quer cozinhar? ");
+        //https://www.coingecko.com/pt/developers/painel 
+        
+        System.out.println("Nome da moeda: ");
         Scanner ler = new Scanner(System.in);
-        String receita = ler.nextLine();
+        String moeda = ler.nextLine();
+        // String chave = ""; //n precisa da chave
 
-        String theMealDb = "www.themealdb.com/api/json/v1/1/search.php?s=" + receita;
+        String coinGecko = "https://api.coingecko.com/api/v3/simple/price?ids=" + moeda + "&vs_currencies=usd";
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create(theMealDb)) //
+            .uri(URI.create(coinGecko))
             .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());    
+        System.out.println(response.body());
+        
     }
 }

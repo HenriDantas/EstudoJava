@@ -7,6 +7,13 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import Projeto.meuProjeto.Titulo;
+import Projeto.meuProjeto.TituloOmdb;
+
 public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner ler = new Scanner(System.in);
@@ -22,7 +29,13 @@ public class PrincipalComBusca {
                 .build();
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
-                System.out.println(response.body());
+                String json = response.body();
+
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+        TituloOmdb tituloOmdb = gson.fromJson(json, TituloOmdb.class);
+        System.out.println("tituloomdb: " + tituloOmdb);
+        Titulo titulo = new Titulo(tituloOmdb);
+        System.out.println("titulo" + titulo);
     }
 
 }

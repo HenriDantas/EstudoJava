@@ -1,8 +1,13 @@
 package Projeto.meuProjeto;
 
+
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo {
 
+    @SerializedName("Title")
     private String nome;
+    @SerializedName("Year")
     private int anoLancamento;
     private boolean incluidoNoPlano;
     private double somaAvaliacao;
@@ -12,6 +17,12 @@ public class Titulo {
     public Titulo(String nome, int anoLancamento){
         this.anoLancamento = anoLancamento;
         this.nome = nome;
+    }
+
+    public Titulo(TituloOmdb tituloOmdb) {
+        this.nome = tituloOmdb.title();
+        this.anoLancamento = Integer.valueOf(tituloOmdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(tituloOmdb.runtime().substring(0, 2));
     }
 
     public String getNome() {
@@ -74,6 +85,11 @@ public class Titulo {
 
     public double mediaAvaliacao(){
         return somaAvaliacao / totalDeAvaliacoes;       
+    }
+
+    @Override
+    public String toString() {
+        return "nome: " + nome + ", Ano lançamento: " + anoLancamento + " e Duração: " + duracaoEmMinutos;
     }
 
 }
