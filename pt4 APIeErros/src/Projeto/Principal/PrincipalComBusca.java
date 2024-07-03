@@ -11,6 +11,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import Projeto.excecao.ErroConversaoDoAnoException;
 import Projeto.meuProjeto.Titulo;
 import Projeto.meuProjeto.TituloOmdb;
 
@@ -21,7 +22,7 @@ public class PrincipalComBusca {
         String filme = ler.nextLine();
         
         String endereco = "http://www.omdbapi.com/?t=" + filme +"&apikey=c21460ab";
-        
+        try{
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(endereco))
@@ -36,6 +37,15 @@ public class PrincipalComBusca {
         System.out.println("tituloomdb: " + tituloOmdb);
         Titulo titulo = new Titulo(tituloOmdb);
         System.out.println("titulo" + titulo);
+        } catch (NumberFormatException e) {
+            System.out.println("Aconteceu um erro: ");
+            System.out.println(e.getMessage());
+        } catch (ErroConversaoDoAnoException e) {
+           System.out.println(e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Algum erro de argumento na busca, verifique o endereço");
+        }
+        System.out.println("Finalizado");
     }
 
 }

@@ -3,11 +3,11 @@ package Projeto.meuProjeto;
 
 import com.google.gson.annotations.SerializedName;
 
+import Projeto.excecao.ErroConversaoDoAnoException;
+
 public class Titulo {
 
-    @SerializedName("Title")
     private String nome;
-    @SerializedName("Year")
     private int anoLancamento;
     private boolean incluidoNoPlano;
     private double somaAvaliacao;
@@ -21,6 +21,9 @@ public class Titulo {
 
     public Titulo(TituloOmdb tituloOmdb) {
         this.nome = tituloOmdb.title();
+        if(tituloOmdb.year().length() > 4){
+            throw new ErroConversaoDoAnoException("Erro ao converter o ano, forma que veio inválida");
+        }
         this.anoLancamento = Integer.valueOf(tituloOmdb.year());
         this.duracaoEmMinutos = Integer.valueOf(tituloOmdb.runtime().substring(0, 2));
     }
