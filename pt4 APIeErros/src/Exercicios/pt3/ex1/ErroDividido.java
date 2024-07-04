@@ -1,4 +1,4 @@
-package Exercicios.pt3.ex1;
+package Exercicios.pt3.Ex1;
 
 public class ErroDividido extends RuntimeException{
     private String menssagem;
