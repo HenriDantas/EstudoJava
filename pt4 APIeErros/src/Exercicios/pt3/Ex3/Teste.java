@@ -23,10 +23,19 @@ public static void main(String[] args) throws IOException, InterruptedException 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create(gitHubAPI))
+            .header("Accept", "application/vnd.github.v3+json")
             .build();
         
-        HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        if (response.statusCode() == 404) {
+            throw new ErroBuscaUserGitHubException("Usuário não encontrado no GitHub.");
+        }
+
         System.out.println(response.body());    
+    } catch (IOException | InterruptedException e) {
+        System.out.println("Opss… Houve um erro durante a consulta à API do GitHub.");
+        e.printStackTrace();
     } catch (ErroBuscaUserGitHubException e) {
         System.out.println(e.getMessage());
     }}

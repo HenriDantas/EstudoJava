@@ -6,9 +6,9 @@ public class Teste {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
 
-        System.out.println("Fale o primeiro numero: ");
+        System.out.println("Fale o numero que será dividido: ");
         int n1 = ler.nextInt();
-        System.out.println("Fale o segundo numero: ");
+        System.out.println("Fale o numero que dividirá ele: ");
         int n2 = ler.nextInt();
         try {
             Divisao dividido = new Divisao(n1, n2);

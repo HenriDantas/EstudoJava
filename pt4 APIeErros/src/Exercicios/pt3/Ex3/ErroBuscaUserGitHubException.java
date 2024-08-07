@@ -1,11 +1,15 @@
 package Exercicios.pt3.Ex3;
 
 public class ErroBuscaUserGitHubException  extends RuntimeException{
-    // private String mensagem;
+    private String mensagem;
 
-    // public ErroBuscaUserGitHubException(String mensagem){
-    //     this.mensagem = mensagem;
-    // }    n precisa acho, ja que n é usado construtor dele
+    // public ErroConsultaGitHubException(String mensagem) {
+    //     super(mensagem);
+    // } na correção do professor ele fez assim, seria mesma coisa doq o meu construtor?
+
+    public ErroBuscaUserGitHubException(String mensagem){
+        this.mensagem = mensagem;
+    }
 
     @Override
     public String getMessage() {
