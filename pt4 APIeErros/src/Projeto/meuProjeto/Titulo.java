@@ -92,7 +92,7 @@ public class Titulo {
 
     @Override
     public String toString() {
-        return "nome: " + nome + ", Ano lançamento: " + anoLancamento + " e Duração: " + duracaoEmMinutos;
+        return "(nome: " + nome + ", Ano lançamento: " + anoLancamento + " e Duração: " + duracaoEmMinutos + ")";
     }
 
 }
