@@ -23,13 +23,13 @@ public class PrincipalComBusca {
 
         String filme = "";
         List<Titulo> titulos = new ArrayList<>();
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).setPrettyPrinting().create();
 
         while (!filme.equalsIgnoreCase("Sair")) {
             
             Scanner ler = new Scanner(System.in);
             System.out.println("Digite um filme para buscar: ");
             filme = ler.nextLine();
-            Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).setPrettyPrinting().create();
 
             if(filme.equalsIgnoreCase("sair")){
                 break;
@@ -69,7 +69,7 @@ public class PrincipalComBusca {
         System.out.println(titulos);
         FileWriter escrita = new FileWriter("filmes.json");
         escrita.write(gson.toJson(titulos)); 
-        // escrita.close();
+        escrita.close();
         
         System.out.println("Finalizado");
     }

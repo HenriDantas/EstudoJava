@@ -1,0 +1,18 @@
+[
+  {
+    "Nome": "Matrix",
+    "AnoLancamento": 1993,
+    "IncluidoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 60
+  },
+  {
+    "Nome": "Baby",
+    "AnoLancamento": 2015,
+    "IncluidoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 15
+  }
+]
