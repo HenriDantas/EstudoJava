@@ -1,4 +1,4 @@
-package Projeto.excecao;
+package Projeto.Excecao;
 
 public class ErroConversaoDoAnoException extends RuntimeException{
     private String mensagem;

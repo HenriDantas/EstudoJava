@@ -1,0 +1,9 @@
+-Criar um aplicação para consultar a API de CEP (feito)
+
+-menu para o usuario informar o CEP para buscar (feito)
+
+-gerar o arquivo .json com dados do CEP (feito)
+
+BONUS
+-não deixar tudo na main, separar em blocos, classes etc
+-fazer tratamento de erros/excecoes melhores
